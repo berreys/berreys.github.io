@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src = 'script.js'></script>
+    </head>
+    <body>
+        <div class="person-container">
+            <h1>Name:</h1>
+            <p id="selectedName"></p>
+            <script>
+                // Function to get query parameter from URL
+                function getQueryParam(name) {
+                    const urlParams = new URLSearchParams(window.location.search);
+                    return urlParams.get(name);
+                }
+        
+                // Get the name query parameter from the URL
+                const selectedName = getQueryParam("name");
+        
+                // Display the selected name on the page
+                document.getElementById("selectedName").innerText = selectedName;
+            </script>
+        </div>
+    </body>
+</html>

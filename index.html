@@ -10,7 +10,7 @@
     <body>
         <div class="dropdown-container">
             <label for="selectName">Who are you?</label>
-            <select id="selectName">
+            <select id="selectName" onchange="submitForm()">
                 <option value="">Select:</option>
                 <option value="Sam">Sam</option>
                 <option value="Lydia">Lydia</option>
@@ -23,7 +23,6 @@
                 <option value="Hanna">Hanna</option>
                 <option value="Thomas">Thomas</option>
             </select>
-            <button onclick="submitForm()">Submit</button>
         </div>
     </body>
 </html>

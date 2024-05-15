@@ -5,3 +5,7 @@ function submitForm() {
     }
     window.location.href = "person.html?name=" + encodeURIComponent(selectedName);
 }
+
+const people = [
+    
+]

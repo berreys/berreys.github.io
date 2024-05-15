@@ -9,8 +9,12 @@
     </head>
     <body>
         <div class="dropdown-container">
-            <label for="selectName">Who are you?</label>
-            <select id="selectName" onchange="submitForm()">
+            <div class="label-wrapper">
+                <label for="selectName">Who are you?</label>
+            </div>
+            
+            <div class="dropdown-wrapper">
+                <select id="selectName" onchange="submitForm()">
                 <option value="10">Select:</option>
                 <option value="0">Sam</option>
                 <option value="1">Lydia</option>
@@ -23,6 +27,9 @@
                 <option value="8">Hanna</option>
                 <option value="9">Thomas</option>
             </select>
+            </div>
+
+            
         </div>
     </body>
 </html>

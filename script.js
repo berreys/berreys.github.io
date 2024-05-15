@@ -68,3 +68,7 @@ const people = [
         tent: 'Tent 1'
     },
 ]
+
+function getPersonObj(index) {
+    return people[index];
+}

@@ -1,3 +1,6 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 body{
     background: url('canyonlands.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -6,9 +9,31 @@ body{
     background-size: cover;
 }
 .dropdown-container{
-    height: 100px;
-    width: 100px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px 20px;
     margin: 0 auto;
     margin-top: 200px;
-    background-color: black;
+    background-color: rgba(256, 256, 256, .5);
+    border-radius: 3px;
+}
+.dropdown-wrapper, .label-wrapper{
+    width: fit-content;
+    margin: 0 auto;
+}
+select{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.person-container{
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(256, 256, 256, .5);
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 5px 5px;;
+}
+h1{
+    text-align: center;
 }

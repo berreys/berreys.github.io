@@ -9,22 +9,36 @@
     </head>
     <body>
         <div class="person-container">
-            <h1>Name:</h1>
-            <p id="selectedName"></p>
-            <script>
-                // Function to get query parameter from URL
-                function getQueryParam(name) {
-                    const urlParams = new URLSearchParams(window.location.search);
-                    return urlParams.get(name);
-                }
-        
-                // Get the name query parameter from the URL
-                const selectedName = getQueryParam("name");
-                
-        
-                // Display the selected name on the page
-                document.getElementById("selectedName").innerText = selectedName;
-            </script>
+            <h1 id="selectedName">Name:</h1>
+            <p>
+                Hey there pal! This is gonna be so fun!
+                You are going to be in <span id="car"></span> leaving at <span id="leaving"></span>.
+                <br>
+                <span id="sleep"></span>
+            </p>
         </div>
     </body>
+    <script>
+        // Function to get query parameter from URL
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+        // Get the name query parameter from the URL
+        const selectedName = getQueryParam("name");
+        
+        const index = parseInt(selectedName);
+        const person = getPersonObj(index)
+        console.log(person)
+        // Display the selected name on the page
+        document.getElementById("selectedName").innerText = person.name;
+        document.getElementById("car").innerText = person.car;
+        document.getElementById("leaving").innerText = person.leaving;
+        if(person.name === "Damien" || person.name === "Chandler"){
+            document.getElementById("sleep").innerText = person.tent;
+        }
+        else{
+            document.getElementById("sleep").innerText = "You will be sleeping in " + person.tent + '.'
+        }
+    </script>
 </html>
